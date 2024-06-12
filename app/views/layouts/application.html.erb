@@ -11,9 +11,9 @@
   </head>
 
   <body>
-    <% flash.each do |name, message| %>
-      <%= message %>
-    <% end %>
+    <%= render 'layouts/messages' %>  
+    <!-- Reads the partial _messages.html.erb, ruby doesnt need the _ in the name to recognize it. 
+         Also, having the _ in the name is common convention for partials-->
     <%= yield %>
   </body>
 </html>
